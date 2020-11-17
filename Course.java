@@ -13,8 +13,11 @@ public class Course {
     private String courseID;
     private String courseName;
     private int capacity;
-    private boolean isCool;
 
+    @Override
+    public Course clone(){
+        return new Course(this.courseID, this.courseName, this.capacity);
+    }
     public Course(){
         this("1", "Hello", 1);
     }
